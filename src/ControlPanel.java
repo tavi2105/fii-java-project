@@ -3,11 +3,16 @@ import java.awt.event.ActionEvent;
 
 public class ControlPanel extends JPanel {
 
-    final MainFrame frame;
+    private  MainFrame frame = null;
+    private Top10 frame1 = null;
     JButton backBtn = new JButton("Back to menu");
 
     public ControlPanel(MainFrame frame) {
         this.frame = frame;
+        init();
+    }
+    public ControlPanel(Top10 frame) {
+        this.frame1 = frame;
         init();
     }
     private void init() {
@@ -17,7 +22,11 @@ public class ControlPanel extends JPanel {
     }
     private void back(ActionEvent e) {
         setVisible(false);
-        frame.dispose();
+        if(frame1 == null){
+            frame.dispose();
+        } else {
+            frame1.dispose();
+        }
         FirstWindow first = new FirstWindow();
     }
 }

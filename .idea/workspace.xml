@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c71977f3-91cf-4d7d-a72e-efc1f1d08b89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Top10.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawingPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/ControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/ControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/LoginAndSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/LoginAndSettings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/MainFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginAndSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginAndSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +43,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-json.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -68,7 +81,8 @@
       <workItem from="1590694135632" duration="5499000" />
       <workItem from="1590747195598" duration="32000" />
       <workItem from="1591359631364" duration="415000" />
-      <workItem from="1591394907864" duration="4644000" />
+      <workItem from="1591394907864" duration="6653000" />
+      <workItem from="1591445218142" duration="7064000" />
     </task>
     <servers />
   </component>
@@ -84,22 +98,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590500614347" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1591403320847">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1591453003350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591403320847" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1591403320847">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591453003350" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1591455976482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591403320847" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1591403320846">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591455976482" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1591455976482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591403320846" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1591403320847">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591455976482" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1591455976482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591403320847" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591455976482" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1591455976482">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591455976482" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1590700681117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -116,13 +134,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590700681117" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1591453005925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591453005925" />
     <state x="690" y="300" key="extract.method.dialog" timestamp="1590694627729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="300" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590694627729" />
-    <state x="702" y="139" key="refactoring.ChangeSignatureDialog" timestamp="1590672798150">
+    <state x="702" y="139" key="refactoring.ChangeSignatureDialog" timestamp="1591452168403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="702" y="139" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590672798150" />
+    <state x="702" y="139" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591452168403" />
   </component>
 </project>

@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 public class LoginAndSettings extends JPanel {
     final FirstWindow frame;
     public static JButton play;
-    public static JButton playWithPC;
+//    public static JButton playWithPC;
+    public static JButton top;
     public static JTextField player1;
     public static JTextField player2;
     public static JComboBox dimension;
@@ -22,6 +23,7 @@ public class LoginAndSettings extends JPanel {
         JPanel panel = new JPanel();
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
+        JPanel panel3 = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
         panel.setBorder(BorderFactory.createEmptyBorder(60, 5, 5, 5));
         panel1.setLayout(new BoxLayout(panel1, BoxLayout.PAGE_AXIS));
@@ -47,8 +49,11 @@ public class LoginAndSettings extends JPanel {
         play = new JButton("Play");
         panel2.add(play);
 
-        playWithPC = new JButton("Play with computer");
-        panel2.add(playWithPC);
+//        playWithPC = new JButton("Play with computer");
+//        panel2.add(playWithPC);
+
+        top = new JButton("View top 10 players");
+        panel3.add(top);
 
         JPanel panOuter = new JPanel(new BorderLayout());
         JPanel panLeft = new JPanel(new BorderLayout());
@@ -79,11 +84,13 @@ public class LoginAndSettings extends JPanel {
         add(panel);
         add(panel1);
         add(panel2);
+        add(panel3);
         add(panOuter);
 
 
         play.addActionListener(this::play);
-        playWithPC.addActionListener(this::playWithPC);
+//        playWithPC.addActionListener(this::playWithPC);
+        top.addActionListener(this::top);
 
     }
 
@@ -91,14 +98,19 @@ public class LoginAndSettings extends JPanel {
         if(!player1.getText().equals("") && !player2.getText().equals("")){
             Player plr1 = createPlayer(player1.getText());
             Player plr2 = createPlayer(player2.getText());
-            MainFrame frame = new MainFrame(plr1,plr2,0);
+            MainFrame frame = new MainFrame(plr1,plr2);
         }
     }
-    private void playWithPC(ActionEvent e) {
-        if(!player1.getText().equals("")){
-            Player player = createPlayer(player1.getText());
-            MainFrame frame = new MainFrame(player,1);
-        }
+//    private void playWithPC(ActionEvent e) {
+//        if(!player1.getText().equals("")){
+//            Player player = createPlayer(player1.getText());
+//            MainFrame frame = new MainFrame(player,1);
+//        }
+//    }
+    private void top(ActionEvent e) {
+        setVisible(false);
+        frame.dispose();
+        Top10 frame = new Top10();
     }
     private Player createPlayer(String playerName){
         setVisible(false);
