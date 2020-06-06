@@ -11,6 +11,7 @@ public class MainFrame extends JFrame {
     Game game;
     int mode;
     int clickCounter;
+    boolean gameOver = false;
     public MainFrame(Player player, int mode) {
         super(player.getName());
         this.player1 = player;
@@ -54,25 +55,41 @@ public class MainFrame extends JFrame {
         new MouseAdapter() {
           @Override
           public void mousePressed(MouseEvent e) {
-            int x = (e.getX() / (W / 3)) * (W / 3) + W / 6;
-            int y = (e.getY() / (W / 3)) * (W / 3) + W / 6;
-            int matrixX = e.getX() / (W / 3);
-            int matrixY = e.getY() / (W / 3);
-            if (game.isEmpty(matrixX, matrixY)) {
-                if (clickCounter % 2 == 0) {
-                    canvas.drawX(x, y);
-                    game.setByIndexes(matrixX, matrixY, 2);
-                } else {
-                    canvas.drawO(x, y);
-                    game.setByIndexes(matrixX, matrixY, 1);
-                }
-                clickCounter++;
-                int[] done = game.isDone();
-                if(done[1] != 0){
-                    
-                }
-            }
-            repaint();
+              if(!gameOver){
+                  int x = (e.getX() / (W / 3)) * (W / 3) + W / 6;
+                  int y = (e.getY() / (W / 3)) * (W / 3) + W / 6;
+                  int matrixX = e.getX() / (W / 3);
+                  int matrixY = e.getY() / (W / 3);
+                  if (game.isEmpty(matrixX, matrixY)) {
+                      if (clickCounter % 2 == 0) {
+                          canvas.drawX(x, y);
+                          game.setByIndexes(matrixX, matrixY, 2);
+                      } else {
+                          canvas.drawO(x, y);
+                          game.setByIndexes(matrixX, matrixY, 1);
+                      }
+                      clickCounter++;
+                      int[] done = game.isDone();
+                      int aux = done[0]*(W/3)+W/6;
+                      if(done[1] != 0){
+                          if(done[0]<3){
+                              if(done[1] == 1){
+                                  canvas.drawLine(aux,0,aux,W,new Color(255,0,34));
+                              } else {
+                                  canvas.drawLine(0,aux,W,aux,new Color(255,0,34));
+                              }
+                          } else {
+                              if(done[1] == 1){
+                                  canvas.drawLine(0,0,W,W,new Color(255,0,34));
+                              } else {
+                                  canvas.drawLine(0,W,W,0,new Color(255,0,34));
+                              }
+                          }
+                          gameOver = true;
+                      }
+                  }
+                  repaint();
+              }
           }
         });
     }
