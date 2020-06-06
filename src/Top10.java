@@ -35,7 +35,7 @@ public class Top10 extends JFrame {
             JSONArray arr = obj.getJSONArray("json");
             for (int i = 0; i < arr.length(); i++)
             {
-                label = new JLabel(i + ":" + arr.getJSONObject(i).getString("name") + " -> scor: "
+                label = new JLabel((i+1) + ":" + arr.getJSONObject(i).getString("name") + " -> scor: "
                         + arr.getJSONObject(i).getInt("wins"), JLabel.CENTER);
                 label.setFont(new Font("Arial Black", Font.PLAIN, 20));
                 panel.add(label);

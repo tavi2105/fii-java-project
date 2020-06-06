@@ -100,14 +100,26 @@ public class MainFrame extends JFrame {
                                       ex.printStackTrace();
                                   }
                               } else {
-                                  try {
-                                      putRequest("http://localhost:8083/players/update/"+player1.getName());
-                                  } catch (Exception ex) {
-                                      ex.printStackTrace();
+                                  if(player1.getSign() == '0'){
+                                      try {
+                                          putRequest("http://localhost:8083/players/update/"+player1.getName());
+                                      } catch (Exception ex) {
+                                          ex.printStackTrace();
+                                      }
+                                  } else {
+                                      try {
+                                          putRequest("http://localhost:8083/players/update/"+player2.getName());
+                                      } catch (Exception ex) {
+                                          ex.printStackTrace();
+                                      }
                                   }
                               }
                           }
                           gameOver = true;
+                          controlPanel.addPlayAgain(player1,player2);
+                      }
+                      if(clickCounter > 8){
+                          controlPanel.addPlayAgain(player1,player2);
                       }
                   }
                   repaint();
@@ -160,6 +172,7 @@ public class MainFrame extends JFrame {
 
         for (int c; (c = in.read()) >= 0;)
             System.out.print((char)c);
+         System.out.println();
     }
     public void putRequest(String paramUrl) throws Exception {
         URL url = new URL(paramUrl);
@@ -173,5 +186,7 @@ public class MainFrame extends JFrame {
 
         for (int c; (c = in.read()) >= 0;)
             System.out.print((char)c);
+
+        System.out.println();
     }
 }
